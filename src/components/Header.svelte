@@ -1,6 +1,9 @@
 <script>
-	import { slide } from 'svelte/transition';
+	import { logicalPropertiesHorizontalSlide, horizontalSlide } from '../js/transition';
+	import { createEventDispatcher } from 'svelte';
+	import ExtendMenu from './ExtendMenu.svelte';
 
+	const dispatch = createEventDispatcher();
 	let showMenu = false;
 
 	const socialMediaLinks = [
@@ -47,11 +50,12 @@
 
 	const extendMenu = () => {
 		showMenu = !showMenu;
+		dispatch('toggle', showMenu);
 	};
 </script>
 
-<header class="bg-gray-dark fixed top-0 left-0 h-screen px-1 flex justify-start items-stretch">
-	<div class="relative w-8 border-r border-gray-light py-8">
+<header class="bg-gray-dark px-1 fixed top-0 left-0 h-screen flex justify-start items-stretch">
+	<div class="relative w-8 py-8">
 		<a
 			href="#!"
 			class="text-xl font-bold text-white transform -rotate-90 inline-block fixed top-12 left-0 -translate-x-3 py-1"
@@ -80,31 +84,12 @@
 	</div>
 
 	<!-- extend nav -->
-	<!-- {#if showMenu} -->
-	<div class="px-10 py-8">
-		<!-- top section -->
-		<div>
-			<!-- social Media -->
-			<div class="flex flex-col justify-start">
-				{#each socialMediaLinks as item}
-					<a href={item.url} class="text-gray-light text-sm">{item.name}</a>
-				{/each}
-			</div>
-
-			<!-- addresses -->
-			<div>
-				<address>
-					6913 King Green Ste.<br />
-					2689 Los Angeles<br />
-					CA 80016
-				</address>
-
-				<div>
-					<a href="mailto:plexar@info.com">plexar@info.com</a>
-					<a href="tel:+36 4587 9012">+36 4587 9012</a>
-				</div>
-			</div>
+	<!-- {#if showMenu}
+		<div
+			transition:horizontalSlide={{ axis: 'x', duration: 500 }}
+			class=" w-screen lg:w-[80vw] xl:w-[70vw] px-10 py-8 border-l border-gray-light"
+		>
+			<ExtendMenu />
 		</div>
-	</div>
-	<!-- {/if} -->
+	{/if} -->
 </header>
