@@ -18,11 +18,16 @@
 	</div>
 
 	<div
-		class="bg-gray-dark ml-10 h-full w-screen lg:w-[80vw] xl:w-[70vw] px-10 py-8 border-l border-gray-light transition duration-300 ease-in-out transform relative z-0 {showMenu
+		class="h-full flex transition duration-300 ease-in-out transform relative z-0 {showMenu
 			? 'translate-x-0'
-			: '-translate-x-full'}"
+			: '-translate-x-[100%] lg:-translate-x-[80%] xl:-translate-x-[70%]'}"
 	>
-		<ExtendMenu />
+		<div
+			class="bg-gray-dark ml-10 h-full w-screen lg:w-[80vw] xl:w-[70vw] px-10 py-8 border-l border-gray-light "
+		>
+			<ExtendMenu />
+		</div>
+
+		<slot />
 	</div>
-	<slot />
 </div>
