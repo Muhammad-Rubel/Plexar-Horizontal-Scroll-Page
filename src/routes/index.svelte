@@ -2,6 +2,7 @@
 	import '@splidejs/svelte-splide/css';
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 	import Hero from '../components/homepage/Hero.svelte';
+	import SliderCard from '../components/homepage/SliderCard.svelte';
 
 	const items = [
 		{
@@ -62,45 +63,40 @@
 		wheel: true,
 		pagination: false,
 		perPage: 1,
-		perMove: 1
+		perMove: 1,
+		padding: {
+			right: '10rem'
+		},
+		breakpoints: {
+			640: {
+				padding: {
+					right: '0rem'
+				}
+			}
+		}
 	};
 </script>
 
-<main class="">
-	<Splide {options}>
-		<SplideSlide>
-			<Hero />
-		</SplideSlide>
-
-		{#each items as item, i}
+<main class="w-[97vw]">
+	<div class="w-[97vw]">
+		<Splide {options}>
 			<SplideSlide>
-				<div>
-					<!-- image -->
-					<div>
-						{#if item.image}
-							<img src={item.image} alt="" class="" />
-						{/if}
-
-						{#if item.video}
-							<!-- svelte-ignore a11y-media-has-caption -->
-							<video width="320" height="240" controls>
-								<source src={item.video} type="video/mp4" />
-							</video>
-						{/if}
-
-						<span>
-							{#if i < 8}
-								<span>0</span>{/if}{i + 1}</span
-						>
-					</div>
-
-					<div>
-						<h2>{item.title}</h2>
-					</div>
-
-					<h3>{@html item.subtitle}</h3>
-				</div>
+				<Hero />
 			</SplideSlide>
-		{/each}
-	</Splide>
+
+			{#each items as item, i}
+				<SplideSlide>
+					<SliderCard {item} index={i} />
+				</SplideSlide>
+			{/each}
+		</Splide>
+	</div>
 </main>
+
+<style>
+	:global(.splide),
+	:global(.splide__track),
+	:global(.splide__slide) {
+		@apply h-screen;
+	}
+</style>

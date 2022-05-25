@@ -19,10 +19,9 @@
 	];
 </script>
 
-<section class="h-full w-screen">
-	<div
-		class="w-screen lg:w-[80vw] xl:w-[70vw] 2xl:w-[40vw] px-4 py-8 lg:px-10 h-full flex flex-col justify-between relative"
-	>
+<section class="h-full">
+	<!-- w-screen lg:w-[80vw] xl:w-[70vw] 2xl:w-[40vw] -->
+	<div class="px-4 py-8 lg:px-10 h-full flex flex-col justify-between relative">
 		<!-- top section -->
 		<div class="flex justify-start items-start space-x-20">
 			<div class="text-gray-light text-sm">
@@ -56,9 +55,11 @@
 		</div>
 
 		<!-- scroll -->
-		<div class="absolute top-[50%] right-0 flex flex-col justify-start space-y-3">
+		<div class="absolute top-[50%] right-10 flex flex-col justify-start space-y-3">
 			<span class="text-sm text-gray-light">Scroll</span>
-			<span class="inline-block w-32 h-[1px] bg-black transform translate-x-4" />
+			<span
+				class="inline-block w-32 h-[1px] bg-black absolute top-4 left-0 transform translate-x-4 z-50"
+			/>
 		</div>
 	</div>
 </section>
