@@ -3,6 +3,7 @@
 
 	import ExtendMenu from '../components/ExtendMenu.svelte';
 	import Header from '../components/Header.svelte';
+	import Footer from '../components/Footer.svelte';
 
 	let showMenu = false;
 
@@ -30,4 +31,5 @@
 
 		<slot />
 	</div>
+	<!-- <Footer /> -->
 </div>

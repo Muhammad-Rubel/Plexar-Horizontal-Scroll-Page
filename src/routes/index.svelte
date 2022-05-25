@@ -3,6 +3,7 @@
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 	import Hero from '../components/homepage/Hero.svelte';
 	import SliderCard from '../components/homepage/SliderCard.svelte';
+	import Footer from '../components/Footer.svelte';
 
 	const items = [
 		{
@@ -89,6 +90,10 @@
 					<SliderCard {item} index={i} />
 				</SplideSlide>
 			{/each}
+
+			<SplideSlide>
+				<Footer />
+			</SplideSlide>
 		</Splide>
 	</div>
 </main>
