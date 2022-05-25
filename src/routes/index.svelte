@@ -66,10 +66,25 @@
 		perPage: 1,
 		perMove: 1,
 		padding: {
-			right: '10rem'
+			right: '50rem'
 		},
 		breakpoints: {
 			640: {
+				padding: {
+					right: '0rem'
+				}
+			},
+			1500: {
+				padding: {
+					right: '25rem'
+				}
+			},
+			1200: {
+				padding: {
+					right: '20rem'
+				}
+			},
+			1000: {
 				padding: {
 					right: '0rem'
 				}
