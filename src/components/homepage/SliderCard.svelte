@@ -3,7 +3,7 @@
 	export let index = null;
 </script>
 
-<section class="bg-[#eee] h-full flex justify-center items-center w-full">
+<section class=" h-full flex justify-center items-center w-full">
 	<!-- image -->
 	<div class="relative w-[77%]">
 		{#if item.image}

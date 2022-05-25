@@ -1,4 +1,4 @@
-<footer class="px-10 flex flex-col justify-center h-full">
+<footer class="px-10 flex flex-col justify-center h-full max-w-[80vw]">
 	<a href="#!" class="mt-24 flex justify-start items-center space-x-1 text-3xl group">
 		<span>Let’s have a chat</span>
 		<img

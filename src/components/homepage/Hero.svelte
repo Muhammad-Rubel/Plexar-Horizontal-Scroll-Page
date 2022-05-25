@@ -20,7 +20,6 @@
 </script>
 
 <section class="h-full">
-	<!-- w-screen lg:w-[80vw] xl:w-[70vw] 2xl:w-[40vw] -->
 	<div class="px-4 py-8 lg:px-10 h-full flex flex-col justify-between relative">
 		<!-- top section -->
 		<div class="flex justify-start items-start space-x-20">
