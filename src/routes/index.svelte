@@ -118,8 +118,8 @@
 	};
 </script>
 
-<main class="w-[97vw]">
-	<div class="w-[97vw] relative overflow-x-auto">
+<main class="w-screen">
+	<div class="w-screen relative overflow-x-auto">
 		<Splide
 			{options}
 			on:move={(e) => {
