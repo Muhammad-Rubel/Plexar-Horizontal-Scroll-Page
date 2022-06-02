@@ -114,17 +114,10 @@
 	};
 
 	const onMoveSlide = (e) => {
-		// console.log(e);
-		// currentIndex = e.detail.index;
 		console.log(currentIndex);
 	};
 </script>
 
-<!--1. #eee  rgb(228, 199, 174); -->
-<!-- rgb(228, 199, 174);  rgb(243, 201, 141); -->
-<!-- 	style="background-color: {currentIndex !== 0 && currentIndex !== items.length - 1
-		? colors[currentIndex]
-		: '#fff'}" -->
 <main class="w-[97vw]">
 	<div class="w-[97vw] relative overflow-x-auto">
 		<Splide

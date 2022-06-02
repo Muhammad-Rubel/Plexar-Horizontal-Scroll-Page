@@ -54,7 +54,9 @@
 	};
 </script>
 
-<header class="bg-gray-dark px-1 fixed top-0 left-0 h-screen flex justify-start items-stretch">
+<header
+	class="bg-gray-dark px-1 fixed top-0 left-0 bottom-0 h-screen flex justify-start items-stretch"
+>
 	<div class="relative w-8 py-8">
 		<a
 			href="#!"
