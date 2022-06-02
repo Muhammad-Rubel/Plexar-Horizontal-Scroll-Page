@@ -79,6 +79,7 @@
 		wheel: true,
 		releaseWheel: false,
 		pagination: false,
+		waitForTransition: true,
 		perPage: 1,
 		perMove: 1,
 		padding: {
@@ -111,6 +112,12 @@
 	const setColor = (i) => {
 		currentIndex = i;
 	};
+
+	const onMoveSlide = (e) => {
+		// console.log(e);
+		// currentIndex = e.detail.index;
+		console.log(currentIndex);
+	};
 </script>
 
 <!--1. #eee  rgb(228, 199, 174); -->
@@ -119,12 +126,11 @@
 		? colors[currentIndex]
 		: '#fff'}" -->
 <main class="w-[97vw]">
-	<div class="w-[97vw]">
+	<div class="w-[97vw] relative overflow-x-auto">
 		<Splide
 			{options}
 			on:move={(e) => {
-				currentIndex = e.detail.prev;
-				console.log(e.detail.prev);
+				onMoveSlide(e);
 			}}
 		>
 			<SplideSlide>
@@ -140,7 +146,6 @@
 						class="h-full transition duration-200 ease-in-out"
 						style="background-color: {colors[currentIndex]}"
 					>
-						{items.length}
 						<SliderCard {item} index={i} />
 					</div>
 				</SplideSlide>
